@@ -38,7 +38,7 @@ GNU General Public License for more details.
 #else
 #include "WProgram.h"
 #endif
-#include "Stream.h"
+#include <Stream.h>
 //#include <NewSoftSerial.h>
 #include <math.h>
 #include <stdio.h>
