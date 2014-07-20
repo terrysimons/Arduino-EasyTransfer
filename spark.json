@@ -1,0 +1,7 @@
+{
+  "name": "EasyTransfer",
+  "author": "Bill Porter",
+  "license": "GPLv3",
+  "version": "2.1",
+  "description": "Makes it easy for multiple Arduinos to communicate with each other and share data."
+}
