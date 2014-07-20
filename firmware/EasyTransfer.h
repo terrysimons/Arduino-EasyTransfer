@@ -31,7 +31,7 @@ GNU General Public License for more details.
 
 // Make library cross-compatiable
 // with Arduino, GNU C++ for tests, and Spark.
-#if defined(ARDUINO) && ARDUINO >= 22
+#if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
 #elif defined(SPARK)
 #include "application.h"
