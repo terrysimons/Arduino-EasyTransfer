@@ -28,12 +28,16 @@ GNU General Public License for more details.
 //make it a little prettier on the front end. 
 #define details(name) (byte*)&name,sizeof(name)
 
-//Not neccessary, but just in case. 
-//#if ARDUINO > 22
-//#include "Arduino.h"
-//#else
-//#include "WProgram.h"
-//#endif
+
+// Make library cross-compatiable
+// with Arduino, GNU C++ for tests, and Spark.
+#if defined(ARDUINO) && ARDUINO >= 22
+#include "Arduino.h"
+#elif defined(SPARK)
+#include "application.h"
+#else
+#include "WProgram.h"
+#endif
 #include "Stream.h"
 //#include <NewSoftSerial.h>
 #include <math.h>
