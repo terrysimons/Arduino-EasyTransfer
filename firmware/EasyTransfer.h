@@ -30,7 +30,7 @@ GNU General Public License for more details.
 
 //Not neccessary, but just in case. 
 //#if ARDUINO > 22
-#include "Arduino.h"
+//#include "Arduino.h"
 //#else
 //#include "WProgram.h"
 //#endif
