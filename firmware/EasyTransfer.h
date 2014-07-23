@@ -33,17 +33,20 @@ GNU General Public License for more details.
 // with Arduino, GNU C++ for tests, and Spark.
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
-#elif defined(SPARK)
-#include "application.h"
 #else
 #include "WProgram.h"
 #endif
+
+#if defined(SPARK)
+#include "application.h"
+#else
 #include <Stream.h>
 //#include <NewSoftSerial.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <avr/io.h>
+#endif
 
 class EasyTransfer {
 public:
