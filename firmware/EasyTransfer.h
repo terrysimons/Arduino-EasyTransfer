@@ -29,6 +29,9 @@ GNU General Public License for more details.
 #define details(name) (byte*)&name,sizeof(name)
 
 
+#if defined(SPARK)
+#include "application.h"
+#else
 // Make library cross-compatiable
 // with Arduino, GNU C++ for tests, and Spark.
 #if defined(ARDUINO) && ARDUINO >= 100
@@ -36,10 +39,6 @@ GNU General Public License for more details.
 #else
 #include "WProgram.h"
 #endif
-
-#if defined(SPARK)
-#include "application.h"
-#else
 #include <Stream.h>
 //#include <NewSoftSerial.h>
 #include <math.h>
